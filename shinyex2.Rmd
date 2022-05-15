@@ -1,0 +1,21 @@
+---
+title:"Shiny document"
+author:"Ashish Sharda"
+output:"html_document"
+runtime:shiny
+---
+
+```{r,echo=FALSE}
+library(knitr)
+library(ggplot2)
+opts_chunk$set(echo=TRUE,warning= FALSE,message =FALSE)
+
+data(diamonds)
+```
+
+#Inputs {#inputs}
+
+``` {r input-panel-simple}
+inputPanel(checkboxGroupInput('checkGroup',label = 'Checkbox Group',
+                              choices = c("One"="One" ,"Two "="Two")))
+```
